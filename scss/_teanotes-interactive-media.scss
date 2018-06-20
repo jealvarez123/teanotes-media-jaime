@@ -1,0 +1,51 @@
+.teanotes-interactive-media {
+	position: relative;
+	width: 840px;
+	margin: 0 auto;
+}
+
+.im-graphic {
+	margin: 0;
+	position: relative;
+	padding: 40px;
+	img { max-width: 100%; max-height: 100%; }
+}
+
+.im-dots {
+	position: absolute;
+	top: 0;
+}
+
+.im-dot {
+	position: absolute;
+	.dot {
+		width: 24px;
+		height: 24px;
+		border-radius: 100px;
+		background-color: #404E59;
+		cursor: pointer;
+	}
+	&--meta {
+		background-color: rgba(255, 255, 255, 0.90);
+	  padding: 15px;
+	  border-radius: 3px;
+	  position: relative;
+	  min-width: 280px;
+	  top: 3px;
+	  left: 12px;
+		box-shadow: 0 3px 10px 0 rgba(0,0,0,0.15);
+		display: none;
+
+	  h4 {
+	  	text-transform: uppercase;
+	  	font-size: 12px;
+	  	margin-bottom: 6px;
+	  }
+   p {
+   		margin-bottom: 0;
+   		font-size: 12px;
+   }
+	}
+}
+
+
