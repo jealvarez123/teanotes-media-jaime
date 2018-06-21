@@ -19,11 +19,37 @@
 .im-dot {
 	position: absolute;
 	.dot {
-		width: 24px;
-		height: 24px;
-		border-radius: 100px;
-		background-color: #404E59;
+		// width: 24px;
+		// height: 24px;
+		// border-radius: 100px;
+		// background-color: #404E59;
 		cursor: pointer;
+		position: relative;
+		.circle	{
+			width: 24px;
+			height: 24px;
+			border-radius: 100px;
+			background-color: #404E59;
+			position: absolute;
+			.teanotes-icon {
+				color: #fff;
+				position: relative;
+				top: 2px;
+  			left: 3px;
+			}
+		}
+		.ring {
+			border: 3px solid #404E59;
+			border-radius: 100px;
+	    height: 30px;
+	    width: 30px;
+	    position: absolute;
+	    animation: pulsate 1.5s ease-out;
+	    animation-iteration-count: infinite; 
+	    opacity: 0.0;
+	    top: -3px;
+  		left: -3px;
+		}
 	}
 	&--meta {
 		background-color: rgba(255, 255, 255, 0.90);
@@ -48,4 +74,8 @@
 	}
 }
 
-
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}

@@ -6976,11 +6976,32 @@ a.text-dark:hover, a.text-dark:focus {
 .im-dot {
   position: absolute; }
   .im-dot .dot {
-    width: 24px;
-    height: 24px;
-    border-radius: 100px;
-    background-color: #404E59;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
+    .im-dot .dot .circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 100px;
+      background-color: #404E59;
+      position: absolute; }
+      .im-dot .dot .circle .teanotes-icon {
+        color: #fff;
+        position: relative;
+        top: 2px;
+        left: 3px; }
+    .im-dot .dot .ring {
+      border: 3px solid #404E59;
+      border-radius: 100px;
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      -webkit-animation: pulsate 1.5s ease-out;
+              animation: pulsate 1.5s ease-out;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      opacity: 0.0;
+      top: -3px;
+      left: -3px; }
   .im-dot--meta {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px;
@@ -6999,6 +7020,16 @@ a.text-dark:hover, a.text-dark:focus {
     .im-dot--meta p {
       margin-bottom: 0;
       font-size: 12px; }
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.0; }
+  50% {
+    opacity: 1.0; }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0.0; } }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -9504,6 +9535,176 @@ a.text-dark:hover, a.text-dark:focus {
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
+
+/*--------------------------------
+
+teanotes Web Font
+Generated using nucleoapp.com
+
+-------------------------------- */
+@font-face {
+  font-family: 'teanotes';
+  src: url("../fonts/teanotes.eot");
+  src: url("../fonts/teanotes.eot") format("embedded-opentype"), url("../fonts/teanotes.woff2") format("woff2"), url("../fonts/teanotes.woff") format("woff"), url("../fonts/teanotes.ttf") format("truetype"), url("../fonts/teanotes.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*------------------------
+	base class definition
+-------------------------*/
+.teanotes-icon {
+  display: inline-block;
+  font: normal normal normal 1em/1 'teanotes';
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*------------------------
+  change icon size
+-------------------------*/
+/* relative units */
+.teanotes-icon-sm {
+  font-size: 0.8em; }
+
+.teanotes-icon-lg {
+  font-size: 1.2em; }
+
+/* absolute units */
+.teanotes-icon-16 {
+  font-size: 16px; }
+
+.teanotes-icon-32 {
+  font-size: 32px; }
+
+/*----------------------------------
+  add a square/circle background
+-----------------------------------*/
+.teanotes-icon-bg-square,
+.teanotes-icon-bg-circle {
+  padding: 0.35em;
+  background-color: #eee; }
+
+.teanotes-icon-bg-circle {
+  border-radius: 50%; }
+
+/*------------------------------------
+  use icons as list item markers
+-------------------------------------*/
+.teanotes-icon-ul {
+  padding-left: 0;
+  list-style-type: none; }
+
+.teanotes-icon-ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1.4; }
+
+.teanotes-icon-ul > li > .teanotes-icon {
+  margin-right: 0.4em;
+  line-height: inherit; }
+
+/*------------------------
+  spinning icons
+-------------------------*/
+.teanotes-icon-is-spinning {
+  -webkit-animation: teanotes-icon-spin 2s infinite linear;
+  animation: teanotes-icon-spin 2s infinite linear; }
+
+@-webkit-keyframes teanotes-icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes teanotes-icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+/*------------------------
+  rotated/flipped icons
+-------------------------*/
+.teanotes-icon-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.teanotes-icon-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.teanotes-icon-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.teanotes-icon-flip-y {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+.teanotes-icon-flip-x {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+/*------------------------
+	icons
+-------------------------*/
+.teanotes-minimal-down::before {
+  content: "\ea02"; }
+
+.teanotes-tail-left::before {
+  content: "\ea03"; }
+
+.teanotes-tail-right::before {
+  content: "\ea04"; }
+
+.teanotes-heart-2::before {
+  content: "\ea05"; }
+
+.teanotes-heart-2-2::before {
+  content: "\ea06"; }
+
+.teanotes-share-bold::before {
+  content: "\ea07"; }
+
+.teanotes-logo-fb-simple::before {
+  content: "\ea08"; }
+
+.teanotes-logo-twitter::before {
+  content: "\ea09"; }
+
+.teanotes-logo-pinterest::before {
+  content: "\ea0a"; }
+
+.teanotes-home-minimal::before {
+  content: "\ea0b"; }
+
+.teanotes-back-80::before {
+  content: "\ea0c"; }
+
+.teanotes-simple-remove::before {
+  content: "\ea0d"; }
+
+.teanotes-select-84::before {
+  content: "\ea0e"; }
+
+.teanotes-logout::before {
+  content: "\ea0f"; }
+
+.teanotes-small-add::before {
+  content: "\ea10"; }
 
 .sample-pane {
   height: 50vh;
