@@ -1,3 +1,4 @@
+console.log('Can I kick it?');
 $(function() {
 	// Sample FadeIn Animation
 	var media = $('.teanotes-interactive-media');
@@ -13,7 +14,7 @@ $(function() {
 		} else {
 			el.addClass('fadeIn');
 			setTimeout(function() {
-				el.removeClass('fadeIn')	
+				el.removeClass('fadeIn')
 			}, 1000)
 		}
 	}
