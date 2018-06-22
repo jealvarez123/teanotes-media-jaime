@@ -1,4 +1,5 @@
 console.log('Can I kick it?');
+
 $(function() {
 	// Sample FadeIn Animation
 	var media = $('.teanotes-interactive-media');
