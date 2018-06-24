@@ -7021,6 +7021,10 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: 0;
       font-size: 12px; }
 
+.im-dot--meta.show-items div{
+      display: block;
+    }
+
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(0.1, 0.1);
