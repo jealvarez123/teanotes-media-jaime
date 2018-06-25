@@ -12,15 +12,34 @@ $(window).scroll( function(){
 		}
 	});
 });
-
 // This is the function that makes the text for the items appear
 $(function() {
-	$('.im-dot').on('click', function(event) {
-		console.log('it works');
-		$('.im-dot--meta').toggle(function () {
-			$("im-dot--meta").css({display: "block"});
+	$('.im-dot-1').on('click', function(event) {
+		console.log('it works 1');
+		$('.im-dot--meta-1').toggle(function () {
+			$("im-dot--meta-1").css({display: "block"});
 		}, function () {
-			$("im-dot--meta").css({display: "none"});
+			$("im-dot--meta-1").css({display: "none"});
 		});
 	});
-})
+});
+$(function() {
+	$('.im-dot-2').on('click', function(event) {
+		console.log('it works 2');
+		$('.im-dot--meta-2').toggle(function () {
+			$("im-dot--meta-2").css({display: "block"});
+		}, function () {
+			$("im-dot--meta-2").css({display: "none"});
+		});
+	});
+});
+$(function() {
+	$('.im-dot-3').on('click', function(event) {
+		console.log('it works 3');
+		$('.im-dot--meta-3').toggle(function () {
+			$("im-dot--meta-3").css({display: "block"});
+		}, function () {
+			$("im-dot--meta-3").css({display: "none"});
+		});
+	});
+});
