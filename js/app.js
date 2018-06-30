@@ -1,45 +1,64 @@
-// This is for the scroll fade in
-$(window).scroll( function(){
-	/* Check the location of each desired element */
-	$('.teanotes-interactive-media').each( function(i){
-		var bottom_of_object= $(this).position().top + $(this).outerHeight();
+// Create a Scroll Reveal Instance
+window.sr = ScrollReveal();
 
-		var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-		/* If the object is completely visible in the window, fade it in */
-		if( bottom_of_window > bottom_of_object ){
-			$(this).animate({'opacity':'1'},500);
-		}
-	});
-});
 // This is the function that makes the text for the items appear
 $(function() {
-	$('.im-dot-1').on('click', function(event) {
-		console.log('it works 1');
-		$('.im-dot--meta-1').toggle(function () {
-			$("im-dot--meta-1").css({display: "block"});
-		}, function () {
-			$("im-dot--meta-1").css({display: "none"});
+	$('.im-dot').each(function() {
+		var $dropdown = $(this);
+		$( $dropdown).click(function(e) {
+			e.preventDefault();
+			$div = $(".im-dot--meta", $dropdown);
+			$div.toggle();
+			$(".im-dot--meta").not($div).hide();
+			return false;
 		});
+	});
+	$('html').click(function(){
+		$(".im-dot--meta").hide();
 	});
 });
-$(function() {
-	$('.im-dot-2').on('click', function(event) {
-		console.log('it works 2');
-		$('.im-dot--meta-2').toggle(function () {
-			$("im-dot--meta-2").css({display: "block"});
-		}, function () {
-			$("im-dot--meta-2").css({display: "none"});
-		});
+
+// Fade in animation for Interactive Media elements
+var iteractiveMedia = $('.teanotes-interactive-media');
+
+iteractiveMedia.each(function(index, el) {
+	sr.reveal(el, {
+			opacity: .5,
+			viewFactor: .5,
 	});
 });
-$(function() {
-	$('.im-dot-3').on('click', function(event) {
-		console.log('it works 3');
-		$('.im-dot--meta-3').toggle(function () {
-			$("im-dot--meta-3").css({display: "block"});
-		}, function () {
-			$("im-dot--meta-3").css({display: "none"});
-		});
-	});
+
+// Sequenced animations for Interactive List Items
+sr.reveal('.il-list--item', {
+	distance: '0',
+	duration: 850,
+	scale: .6,
+}, 550);
+
+// Animation for the floating images of tea cup
+sr.reveal('.lid', {
+	origin: 'top',
+	opacity: .3,
+	duration: 2000,
+	scale: 1,
+	delay: 120,
+	viewFactor: .9,
+	distance: '90px'
+});
+sr.reveal('.basket', {
+	origin: 'top',
+	distance: '30px',
+	duration: 1800,
+	scale: 1,
+	delay: 1,
+	viewFactor: .9,
+	opacity: .5,
+});
+
+sr.reveal('.teanotes-floating-media .im-dots', {
+		origin: 'bottom',
+		opacity: 0,
+		delay: 1400,
+		duration: 1800
+
 });
