@@ -624,6 +624,39 @@
 		"oAP": "\/fonts\/teanotes.woff2",
 		"oF": 0
 		},
+	"\/img\/basket.png": {
+		"ft": 32768,
+		"iS": 3628,
+		"oA": 0,
+		"oAP": "\/img\/basket.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/cup.png": {
+		"ft": 32768,
+		"iS": 9957,
+		"oA": 0,
+		"oAP": "\/img\/cup.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/lid.png": {
+		"ft": 32768,
+		"iS": 51364,
+		"oA": 0,
+		"oAP": "\/img\/lid.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/img\/matcha-set.jpg": {
 		"ft": 16384,
 		"iS": 128916,
@@ -633,6 +666,17 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"\/img\/top.png": {
+		"ft": 32768,
+		"iS": 1528,
+		"oA": 0,
+		"oAP": "\/img\/top.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
 		"q": 100
 		},
 	"\/index.html": {
@@ -666,8 +710,18 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/jquery-3.3.1.min.min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/lib\/scrollreveal.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/scrollreveal.min.min.js",
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
@@ -716,6 +770,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/scss\/_teanotes-floating-elements.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/css\/_teanotes-floating-elements.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/scss\/_teanotes-icons.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -725,6 +792,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/css\/_teanotes-icons.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/_teanotes-interactive-list.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/css\/_teanotes-interactive-list.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1817,6 +1897,12 @@
 			"followForSyntaxChecking": 1,
 			"linkedFileAbbreviatedPath": "\/js\/lib\/jquery-3.3.1.min.js",
 			"position": 0,
+			"type": 0
+			},
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/lib\/scrollreveal.min.js",
+			"position": 1,
 			"type": 0
 			}
 		]
