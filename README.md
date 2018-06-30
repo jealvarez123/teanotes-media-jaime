@@ -1,2 +1,3 @@
 # Tea Notes Media - Scroll Based Animation Project
-Clone the repository and drop the project folder into CodeKit. More coming soon.
+
+## This was a Micstura project I did. I had to animate the images and an Unordered List.
